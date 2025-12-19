@@ -43,7 +43,7 @@ background-color: #630A10; /* ENSON */
 
 .navbar-logo {
   display: flex;
-  /* Yazı + yıldız yan yana durur (istersen yıldız ekleriz) */
+  /* logo */
 
   gap: 8px;
   /* Eleman arası boşluk */
@@ -92,7 +92,7 @@ background-color: #630A10; /* ENSON */
   width: 150px;   /* küçük ve sade */
   height: auto;
    z-index: 9999; /*  EN ÜSTTE logo */
-  opacity: 0.9;  / biraz yumuşak */
+  opacity: 0.9;  /* biraz yumuşak */
 }
 
 .footer {
