@@ -2,7 +2,7 @@ body {
   margin: 0;
   /* Varsayılan boşlukları sil */
 
-  background: #09012bea;
+  background: #FCF0C8;
   /* Gece laciverti arka plan */
 
   color: #ffffff;
@@ -24,13 +24,18 @@ body {
   padding: 0 50px;
   /* Sağ-sol boşluk */
 
+
+margin-top: -10px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   /* İçerik düzeni */
 
   border-bottom: 1px solid rgba(245, 196, 83, 0.3);
-  /* Altın tonlu ince çizgi */
+  /* Altın ince çizgi */
+
+background-color: #630A10; /* ENSON */
 
   position: relative;
   /* Logoyu ortaya alabilmek için referans */
@@ -82,10 +87,11 @@ body {
 
 .mini-logo {
   position: absolute;
-  top: -50px;
+  top: -55px;
   right: 20px;
-  width: 150px;   /* küçük ve sade /
+  width: 150px;   /* küçük ve sade */
   height: auto;
+   z-index: 9999; /*  EN ÜSTTE logo */
   opacity: 0.9;  / biraz yumuşak */
 }
 
@@ -96,9 +102,10 @@ body {
 
   font-size: 0.9rem;
   color: #ffffffa8; /* hafif soluk beyaz */
+background: #630A10;   /* arka plan (istersen) */
 
   border-top: 1px solid rgba(245, 196, 83, 0.3); /* altın ince çizgi */
-  margin-top: 700px; /* üstten boşluk */
+  margin-top: 740px; /* üstten boşluk */
 }
 /* =====================
      MENU BOXLARI
@@ -187,7 +194,7 @@ body {
 }
 .food-card img {
   width: 70%;        /* kartın genişliğini alsın */
-  height: 70px;      /* 🔽 BURAYI küçült */
+  height: 70px;      /*  BURAYI küçült */
   object-fit: cover;  /* resim bozulmaz, kırpılır */
   display: block;
 }
@@ -199,7 +206,7 @@ body {
 }
 .food-desc {
   font-size: 0.8rem;
-  color: #cccccc;
+  color: #000000;
   margin: 4px 0 6px 0;
   line-height: 1.2;
 }
@@ -208,7 +215,7 @@ body {
 }
 .food-desc {
   font-size: 0.8rem;
-  color: #cccccc;
+  color: #000000;
   margin: 4px 0 6px 0;
   line-height: 1.3;
 }
@@ -243,7 +250,16 @@ body {
 }
 
 .menu-popup.active {
-  max-height: 9999px;   /* 🔥 ÇOK ÖNEMLİ */
+  max-height: 9999px;   /*  ÇOK ÖNEMLİ */
   padding: 20px;
   margin-top: 20px;
+}
+
+.food-info h4 {
+  color: #000;
+}
+
+
+.food-info span {
+  color: #000;
 }

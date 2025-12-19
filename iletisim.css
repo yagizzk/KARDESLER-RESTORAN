@@ -2,7 +2,7 @@ body {
   margin: 0;
   /* Varsayılan boşlukları sil */
 
-  background: #03010fea;
+  background: #FCF0C8;
   /* Gece laciverti arka plan */
 
   color: #ffffff;
@@ -24,6 +24,11 @@ body {
   padding: 0 50px;
   /* Sağ-sol boşluk */
 
+background-color: #630A10;
+
+  margin-top: -10px;
+
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,7 +40,7 @@ body {
   position: relative;
   /* Logoyu ortaya alabilmek için referans */
 }
-
+  
 .navbar-logo {
   display: flex;
   /* Yazı + yıldız yan yana durur (istersen yıldız ekleriz) */
@@ -82,11 +87,12 @@ body {
 
 .mini-logo {
   position: absolute;
-  top: -30px;
+  top: -55px;
   right: 20px;
-  width: 130px;   /* küçük ve sade /
+  width: 150px;   /* küçük ve sade */
   height: auto;
-  opacity: 0.9;  / biraz yumuşak */
+  z-index: 9999;
+  opacity: 0.9;  /* biraz yumuşak */
 }
 
 
@@ -104,7 +110,7 @@ body {
 
   border-radius: 200px;
   overflow: hidden;
-  border: 5px solid #f5c45350; 
+  border: 5px solid #630A10; 
 }
 
 /*    İLETİŞİM KUTUSU           */
@@ -113,9 +119,11 @@ body {
 .info-box {
   margin-top: 40px;   /* Yukarı-aşağı konum */
   margin-left: 40px;  /* Sola-sağa konum */
-  
+  color: #000000;
   font-size: 1.3rem; /* Yazı boyutu */
   line-height: 1.7rem; /* Yazılar arası boşluk */
 
   max-width: 300px; /* Kutunun genişliği */
 }
+
+ 
