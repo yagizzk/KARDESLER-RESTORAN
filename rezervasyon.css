@@ -21,6 +21,7 @@ body {
   height: 110px;
   /* Navbar yüksekliği */
 
+
   padding: 0 50px;
   /* Sağ-sol boşluk */
 
@@ -94,3 +95,23 @@ background-color: #630A10;
   z-index: 9999;
   opacity: 0.9;  /* biraz yumuşak */
 }
+
+.kirmizi-resim{
+  position: fixed;   /* SERBEST GEZME */
+  top: -25.5px;           /* aşağı-yukarı */
+  left: -100px;          /* sağ-sol */
+
+  width: 30px;         /* boyut */
+  height: auto;
+}
+
+.kirmizi2-resim{
+  position: fixed;   /* SERBEST GEZME */
+  top: -25.5px;           /* aşağı-yukarı */
+  left: 1500px;          /* sağ-sol */
+
+  width: 30px;         /* boyut */
+  height: auto;
+}
+
+

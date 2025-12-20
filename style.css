@@ -105,7 +105,7 @@ background-color: #630A10; /* ENSON */
 background: #630A10;   /* arka plan (istersen) */
 
   border-top: 1px solid rgba(245, 196, 83, 0.3); /* altın ince çizgi */
-  margin-top: 1000px; /* üstten boşluk */
+  margin-top: 140px; /* üstten boşluk */
 }
 /* =====================
      MENU BOXLARI
@@ -288,7 +288,7 @@ background: #630A10;   /* arka plan (istersen) */
 
 .video-left-top {
   position: absolute; 
-  bottom: -104px;
+  bottom: -35px;
   right: 982px;
   width: 51%;
   border-radius: 0px;
@@ -297,7 +297,7 @@ background: #630A10;   /* arka plan (istersen) */
 
 .video-right-bottom {
   position: absolute; 
-  bottom: -650px;
+  bottom: -580px;
   right: 10px;
   width: 51%;
   border-radius: 0px;
@@ -311,7 +311,7 @@ background: #630A10;   /* arka plan (istersen) */
 
 .rezervasyon-btn {
   position: absolute; /* konumu ayarlamak için absolute */
-  bottom: 320px;
+  bottom: 380px;
   right: 400px;
   padding: 25px 50px;
   font-size: 2rem;
@@ -335,10 +335,40 @@ background: #630A10;   /* arka plan (istersen) */
 
 .rezervasyon-yazi {
   position: absolute; /* veya absolute ile tam konum */
-  top: 290px;   /* yukarı-aşağı konum */
+  top: 220px;   /* yukarı-aşağı konum */
   left: 990px;    /* sağ-sol konum */
   text-align: center; /* ortala */
   font-size: 2rem;
   font-weight: bold;
   color: #000000;  /* istediğin renk */
+}
+
+
+
+.hakkimizda-box {
+  position: relative; /* konum oynatabilmen için */
+  
+  margin-top: 150px;   /* yukarı-aşağı */
+  margin-left: 60px;  /* sağa-sola */
+
+  max-width: 590px;   /* kutu genişliği */
+  padding: 20px;
+
+  background: rgba(255, 255, 255, 0.05); /* hafif şeffaf */
+  border-left: 3px solid #f03117;
+
+  border-radius: 8px;
+}
+
+.hakkimizda-box h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+  color: #e92424;
+}
+
+.hakkimizda-box p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #000000d0;
 }
