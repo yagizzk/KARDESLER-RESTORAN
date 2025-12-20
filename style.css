@@ -306,23 +306,39 @@ background: #630A10;   /* arka plan (istersen) */
 
 
 
+
+
+
 .rezervasyon-btn {
   position: absolute; /* konumu ayarlamak için absolute */
-  top: 200px;          /* yukarıdan uzaklık */
-  right: 20px;        /* sağdan uzaklık */
-  
-  padding: 12px 20px;
-  background-color: #f5c453;
-  color: #000;
+  bottom: 320px;
+  right: 400px;
+  padding: 25px 50px;
+  font-size: 2rem;
+  font-weight: bold;
+    font-family: 'Ephesis', cursive;
+  color: #ffffff;
+  background-color: #630A10;
   border: none;
-  border-radius: 8px;
-  
-  font-size: 1rem;
+  border-radius: 12px;
   cursor: pointer;
-  transition: 0.2s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+  transition: all 0.3s ease;
+  z-index: 999;
 }
 
 .rezervasyon-btn:hover {
-  background-color: #d4a520;
+  background-color: #000000;
+  transform: translateY(-3px) scale(1.05);
 }
 
+
+.rezervasyon-yazi {
+  position: absolute; /* veya absolute ile tam konum */
+  top: 290px;   /* yukarı-aşağı konum */
+  left: 990px;    /* sağ-sol konum */
+  text-align: center; /* ortala */
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000000;  /* istediğin renk */
+}

@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  /* Varsayılan boşlukları sil */
+
+  background: #FCF0C8;
+  /* Gece laciverti arka plan */
+
+  color: #ffffff;
+  /* Genel yazı rengi */
+
+  font-family: system-ui, sans-serif;
+  /* Modern yazı tipi */
+}
+
+/* =====================
+     NAVBAR
+===================== */
+
+.navbar {
+  
+  height: 110px;
+  /* Navbar yüksekliği */
+
+  padding: 0 50px;
+  /* Sağ-sol boşluk */
+
+background-color: #630A10;
+
+  margin-top: -10px;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* İçerik düzeni */
+
+  border-bottom: 1px solid rgba(245, 196, 83, 0.3);
+  /* Altın tonlu ince çizgi */
+
+  position: relative;
+  /* Logoyu ortaya alabilmek için referans */
+}
+  
+.navbar-logo {
+  display: flex;
+  /* Yazı + yıldız yan yana durur (istersen yıldız ekleriz) */
+
+  gap: 8px;
+  /* Eleman arası boşluk */
+
+  letter-spacing: 0.25rem;
+  /* Harf arası açıklık */
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /* Logoyu ortaya sabitler */
+
+  font-size: 1.7rem;
+  /* Logo boyutu */
+}
+
+
+.navbar-links {
+  display: flex;
+  gap: 24px;
+  /* Linkler arası mesafe */
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  letter-spacing: 0.05rem;
+  transition: 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #f5c453;
+  /* Hover’da altın tonuna kayma */
+}
+
+.site-header {
+  position: relative;
+  padding: 5px;
+}
+
+.mini-logo {
+  position: absolute;
+  top: -55px;
+  right: 20px;
+  width: 150px;   /* küçük ve sade */
+  height: auto;
+  z-index: 9999;
+  opacity: 0.9;  /* biraz yumuşak */
+}
