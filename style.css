@@ -280,15 +280,49 @@ background: #630A10;   /* arka plan (istersen) */
 }
 
 
-.site-video {
+.video-container {
+  position: relative;
   width: 100%;
-  max-width: 950px;
-  display: block;
-    margin: 30px 0px 60px auto; /* SAĞA KAYDIRIR */
-  border-radius: 15px;
-  opacity: 0.85; /* hafif saydam */
+  height: 600px; /* container yüksekliği, ihtiyaca göre değiştir */
+}
+
+.video-left-top {
+  position: absolute; 
+  bottom: -104px;
+  right: 982px;
+  width: 51%;
+  border-radius: 0px;
+  opacity: 0.85;
+}
+
+.video-right-bottom {
+  position: absolute; 
+  bottom: -650px;
+  right: 10px;
+  width: 51%;
+  border-radius: 0px;
+  opacity: 0.85;
 }
 
 
 
+.rezervasyon-btn {
+  position: absolute; /* konumu ayarlamak için absolute */
+  top: 200px;          /* yukarıdan uzaklık */
+  right: 20px;        /* sağdan uzaklık */
+  
+  padding: 12px 20px;
+  background-color: #f5c453;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.rezervasyon-btn:hover {
+  background-color: #d4a520;
+}
 
