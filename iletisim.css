@@ -87,9 +87,9 @@ background-color: #630A10;
 
 .mini-logo {
   position: absolute;
-  top: -55px;
-  right: 20px;
-  width: 150px;   /* küçük ve sade */
+  top: 150px;
+  right: 1550px;
+  width: 350px;   /* küçük ve sade */
   height: auto;
   z-index: 9999;
   opacity: 0.9;  /* biraz yumuşak */
@@ -126,7 +126,36 @@ background-color: #630A10;
   max-width: 300px; /* Kutunun genişliği */
 }
 
+
+
+.logomuz {
+  position: relative; /* referans */
+}
+
+.logomuz img {
+  position: absolute;   /* SADECE resim absolute */
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(8px); /* sağa-sola ayar */
+  height: 50px;
+  width: auto;
+  pointer-events: none; /* linkleri yemesin */
+}
  
+.logoarkası {
+  position: absolute;
+  top: 270px;   /* sayı küçüldükçe YUKARI çıkar */
+  right: 1565px;
+  width: 330px;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+
+
+
 @media (max-width: 1024px) {
 
   .map-wrapper iframe {
