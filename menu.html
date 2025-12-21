@@ -442,20 +442,14 @@
 
 
 </section>
+
+
+<script src="https://cdn.ticimax.com/Scripts/KarScript/kar.js" type="text/javascript"></script>
 <script>
-function toggleMenu(element) {
-  const popup = element.nextElementSibling;
-
-  document.querySelectorAll('.menu-popup').forEach(p => {
-    if (p !== popup) {
-      p.classList.remove('active');
-    }
-  });
-
-  popup.classList.toggle('active');
-}
+  function toggleMenu(box) {
+    const popup = box.nextElementSibling;
+    popup.classList.toggle("active");
+  }
 </script>
-
-
 </body>
 </html>

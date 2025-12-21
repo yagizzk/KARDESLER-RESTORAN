@@ -61,8 +61,8 @@
 </header>
 
 <div class="hakkimizda-box">
-  <h2>Hakkımızda</h2>
-  <p>
+  <h2 class="slide-left">Hakkımızda</h2>
+  <p class="slide-right">
     Kardeşler Restoran olarak yıllardır aynı lezzet, aynı samimiyet.
     Günlük taze ürünler, mangalda işini bilen ustalar ve doyurucu porsiyonlar.
     Amacımız basit: gelen bir daha gelsin.
@@ -75,7 +75,7 @@
   <p>HAZIRLAYANLAR; <BR>Yağız Kalyoncu <br>Kayra Aydın</BR></p>
 </footer>
 
-<p class="rezervasyon-yazi">Kardeşler Restoran’da eşsiz lezzetler seni bekliyor! <br> Hemen rezervasyonunu yap ve favori tatlarını kaçırma</p>
+<p class="rezervasyon-yazi slide-right">Kardeşler Restoran’da eşsiz lezzetler seni bekliyor! <br> Hemen rezervasyonunu yap ve favori tatlarını kaçırma</p>
 
 
 
@@ -89,5 +89,41 @@
 <a href="rezervasyon.html">
 <button class="rezervasyon-btn">Rezervasyon</button>
 </a>
+
+<script src="https://cdn.ticimax.com/Scripts/KarScript/kar.js" type="text/javascript"></script>
+
+
+<script>
+const animler = document.querySelectorAll('.slide-left, .slide-right');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+}, { threshold: 0.3 });
+
+animler.forEach(el => observer.observe(el));
+</script>
+
+
+<script>
+  const rezervasyonYazi = document.querySelector('.rezervasyon-yazi');
+
+  window.addEventListener('scroll', () => {
+    const yaziPos = rezervasyonYazi.getBoundingClientRect().top;
+    const ekran = window.innerHeight;
+
+    if (yaziPos < ekran - 100) {
+      rezervasyonYazi.classList.add('show');
+    }
+  });
+</script>
+
+
+
+
+
 </body>
 </html>
