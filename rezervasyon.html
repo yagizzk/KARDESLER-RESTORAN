@@ -1,64 +1,115 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rezervasyon | Kardeşler Restoran</title>
 
-<link rel="stylesheet" href="rezervasyon.css">
+  <link rel="stylesheet" href="rezervasyon.css" />
+</head>
 
-  <title>Kardeşler Restoran</title>
+<body>
 
-  </head>
-  <body>
-<img src="logo.png" alt="Logo" class="mini-logo">
+  <!-- Üst sağ mini logo (istersen kaldır) -->
+  <header class="site-header">
+    <img src="logo.png" alt="Logo" class="mini-logo">
+  </header>
 
-
-
-
-
-
-
-
-<header class="site-header">
-    <header class="navbar">
-  <!-- Navbar ana kapsayıcı -->
-
-
-
-
-
-
-
-  <div class="navbar-logo">
-
-    <!-- Logo alanı -->
-    <h1 class="logo-text" style="font-style: oblique;">KARDEŞLER RESTORAN</h1>
-  </div>
-
-  <nav class="navbar-links">
-    <!-- Menü linkleri -->
-    <a class="nav-link" href="index.html">Ana Sayfa</a>
-    <a class="nav-link" href="menu.html">Menü</a>
-    <a class="nav-link" href="iletisim.html">İletişim</a>
+  <!-- NAVBAR (arkadaşının teması) -->
+  <header class="navbar">
     <div class="navbar-logo">
+      <h1 class="logo-text" style="font-style: oblique;">KARDEŞLER RESTORAN</h1>
+    </div>
 
-  </a>
-</div>
-  </nav>
+    <nav class="navbar-links">
+      <a class="nav-link" href="index.html">Ana Sayfa</a>
+      <a class="nav-link" href="menu.html">Menü</a>
+      <a class="nav-link" href="rezervasyon.html">Rezervasyon</a>
+      <a class="nav-link" href="iletisim.html">İletişim</a>
+    </nav>
+  </header>
 
+  <main class="page">
+    <h1>Rezervasyon</h1>
+    
 
-<div class="kirmizi-resim">
-  <img src="kırmızı.png" alt="Resim">
-</div>
+    <section class="layout-card">
+      <div class="legend">
+        <span><span class="dot empty"></span> Boş</span>
+        <span><span class="dot selected"></span> Seçilen</span>
+        <span><span class="dot booked"></span> Dolu</span>
 
+        <button id="resetBtn" class="ghost">Sıfırla</button>
+      </div>
 
-<div class="kirmizi2-resim">
-  <img src="kırmızı.png" alt="Resim">
-</div>
+      <div class="floor-wrap" id="floorWrap" aria-label="Masa planı">
+        <!-- Kroki görseli -->
+        <img src="kroki1.png" alt="Restoran Krokisi" class="floor-img" />
+        <div class="tables-layer" id="tablesLayer"></div>
+      </div>
+    </section>
 
+    <section class="form-card">
+      <h2>Seçim</h2>
 
+      <div class="chosen">
+        <div><span>Seçilen Masa:</span> <strong id="chosenTable">—</strong></div>
+        <div><span>Durum:</span> <strong id="chosenStatus">—</strong></div>
+      </div>
 
-</header>
+      <form id="resForm" class="res-form">
+        <label>
+          Isim Soyisim
+          <input required name="name" type="text" placeholder="Ad Soyad" />
+        </label>
 
+        <label>
+          Telefon Numarası
+          <input required name="phone" type="tel" placeholder="05xx xxx xx xx" />
+        </label>
+
+        <label>
+          Tarih
+          <input required name="date" type="date" />
+        </label>
+
+        <label>
+          Saat
+          <input required name="time" type="time" />
+        </label>
+
+        <label>
+          Misafir Sayısı
+          <input required name="people" type="number" min="1" max="6" value="1" />
+        </label>
+
+        <button type="submit" class="primary">Rezervasyonu Onayla</button>
+        
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER  -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-title">KARDEŞLER RESTORAN</div>
+       
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="menu.html">Menü</a>
+        <a href="rezervasyon.html">Rezervasyon</a>
+        <a href="iletisim.html">İletişim</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Kardeşler Restoran. Tüm hakları saklıdır.
+    </div>
+  </footer>
+
+  <script src="rezervasyon.js"></script>
 </body>
-
 </html>

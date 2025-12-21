@@ -1,71 +1,54 @@
-body {
-  margin: 0;
-  /* Varsayılan boşlukları sil */
+/* Basit reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-  background: #FCF0C8;
-  /* Gece laciverti arka plan */
+:root{
+  --bg: #FCF0C8;
+  --wine: #630A10;
+  --ink: #1a1a1a;
+  --card: rgba(255,255,255,0.55);
+  --card2: rgba(255,255,255,0.35);
 
-  color: #ffffff;
-  /* Genel yazı rengi */
-
-  font-family: system-ui, sans-serif;
-  /* Modern yazı tipi */
+  --empty: #04cf4e;
+  --selected: #0d58b4;
+  --booked: #df0000;
 }
 
-/* =====================
-     NAVBAR
-===================== */
+/* Body */
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, sans-serif;
+}
 
+/* Arkadaş navbarı (senin attığın CSS ile aynı mantık) */
 .navbar {
-  
   height: 110px;
-  /* Navbar yüksekliği */
-
-
   padding: 0 50px;
-  /* Sağ-sol boşluk */
-
-background-color: #630A10;
-
+  background-color: var(--wine);
   margin-top: -10px;
-
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* İçerik düzeni */
 
   border-bottom: 1px solid rgba(245, 196, 83, 0.3);
-  /* Altın tonlu ince çizgi */
-
   position: relative;
-  /* Logoyu ortaya alabilmek için referans */
 }
-  
+
 .navbar-logo {
   display: flex;
-  /* Yazı + yıldız yan yana durur (istersen yıldız ekleriz) */
-
   gap: 8px;
-  /* Eleman arası boşluk */
-
   letter-spacing: 0.25rem;
-  /* Harf arası açıklık */
 
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  /* Logoyu ortaya sabitler */
-
   font-size: 1.7rem;
-  /* Logo boyutu */
 }
-
 
 .navbar-links {
   display: flex;
   gap: 24px;
-  /* Linkler arası mesafe */
 }
 
 .nav-link {
@@ -76,42 +59,247 @@ background-color: #630A10;
   transition: 0.2s ease;
 }
 
-.nav-link:hover {
-  color: #f5c453;
-  /* Hover’da altın tonuna kayma */
-}
+.nav-link:hover { color: #f5c453; }
 
-.site-header {
-  position: relative;
-  padding: 5px;
-}
-
+/* Mini logo (arkadaş css mantığı) */
+.site-header { position: relative; padding: 5px; }
 .mini-logo {
   position: absolute;
   top: -55px;
   right: 20px;
-  width: 150px;   /* küçük ve sade */
+  width: 150px;
   height: auto;
   z-index: 9999;
-  opacity: 0.9;  /* biraz yumuşak */
+  opacity: 0.9;
 }
 
-.kirmizi-resim{
-  position: fixed;   /* SERBEST GEZME */
-  top: -25.5px;           /* aşağı-yukarı */
-  left: -100px;          /* sağ-sol */
-
-  width: 30px;         /* boyut */
-  height: auto;
+/* Sayfa */
+.page{
+  padding: 40px 24px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.kirmizi2-resim{
-  position: fixed;   /* SERBEST GEZME */
-  top: -25.5px;           /* aşağı-yukarı */
-  left: 1500px;          /* sağ-sol */
+h1{
+  font-size: 2rem;
+  margin-bottom: 8px;
+  
+  color: var(--wine);
+}
 
-  width: 30px;         /* boyut */
-  height: auto;
+.sub{
+  color: rgba(26,26,26,0.75);
+  margin-bottom: 20px;
+}
+
+/* Kartlar */
+.layout-card, .form-card{
+  border: 3px solid var(--wine);
+  border-radius: 18px;
+  padding: 16px;
+  background: var(--card);
+  margin-bottom: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.legend{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  color: rgba(26,26,26,0.8);
+}
+
+.dot{
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-right: 6px;
+}
+.dot.empty{ background: var(--empty); }
+.dot.selected{ background: var(--selected); }
+.dot.booked{ background: var(--booked); }
+
+.ghost{
+  margin-left: auto;
+  background: transparent;
+  border: 2px solid var(--wine);
+  color: var(--wine);
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.ghost:hover{
+  background: rgba(99,10,16,0.08);
+}
+
+/* Kroki alanı */
+.floor-wrap{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+ 
+  background: var(--card2);
+}
+
+.floor-img{
+  width: 100%;
+  display: block;
+}
+
+/* Masalar layer */
+.tables-layer{
+  position: absolute;
+  inset: 0;
+}
+
+/* Masa butonu */
+.table-dot{
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 2px solid rgba(0,0,0,0.35);
+  color: #111;
+  font-weight: 800;
+  font-size: 12px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  user-select: none;
+  transform: translate(-50%, -50%);
+}
+
+.table-dot.empty{ background: var(--empty); }
+.table-dot.booked{ background: var(--booked); cursor: not-allowed; opacity: .95; }
+.table-dot.selected{ background: var(--selected); }
+
+.table-dot:hover{ filter: brightness(1.03); }
+
+/* Form */
+.form-card h2{
+  margin-bottom: 10px;
+  margin-left: 500px;
+  color: var(--wine);
+}
+
+.chosen{
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  color: rgba(26,26,26,0.8);
+  margin-bottom: 12px;
+}
+.chosen strong{ color: #111; }
+
+.res-form{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.res-form label{
+  color: rgba(26,26,26,0.8);
+  font-size: .95rem;
+  display: grid;
+  gap: 6px;
+}
+.res-form input{
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 2px solid rgba(99,10,16,0.25);
+  background: rgba(255,255,255,0.75);
+  color: #111;
+  outline: none;
+}
+.res-form input:focus{
+  border-color: rgba(99,10,16,0.6);
+}
+
+.primary{
+  grid-column: span 2;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--wine);
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+}
+.primary:hover{ filter: brightness(1.02); }
+
+.hint{
+  grid-column: span 2;
+  color: rgba(26,26,26,0.75);
+  font-size: .9rem;
+}
+
+/* Footer */
+.site-footer{
+  margin-top: 30px;
+  background: var(--wine);
+  color: #fff;
+  padding: 26px 24px 16px;
+}
+
+.footer-inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-title{
+  font-weight: 350;
+  letter-spacing: 0.08rem;
+  font-size: 1.2rem;
+}
+.footer-sub{
+  opacity: 0.9;
+  margin-top: 6px;
+}
+
+.footer-links{
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.footer-links a{
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.95;
+}
+.footer-links a:hover{
+  text-decoration: underline;
+}
+
+.footer-bottom{
+  max-width: 1200px;
+  margin: 14px auto 0;
+  opacity: 0.85;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.25);
+  padding-top: 12px;
 }
 
 
+
+
+
+
+
+/* Mobil */
+@media (max-width: 700px){
+  .res-form{ grid-template-columns: 1fr; }
+  .primary, .hint{ grid-column: span 1; }
+
+  .navbar{ padding: 0 16px; height: 100px; }
+  .navbar-logo{ font-size: 1.1rem; letter-spacing: 0.15rem; }
+  .nav-link{ font-size: 1rem; }
+}
