@@ -1,5 +1,5 @@
-// DEMO masa datası: x/y yüzde (%). Krokinin üstünde doğru yere koyarsın.
-// Not: ID'ler benzersiz olmalı.
+//Krokinin üstünde doğru yere koy.
+
 const TABLES = [
   { id: "1", x: 11, y: 52 },
   { id: "2", x: 26, y: 60 },
@@ -11,8 +11,8 @@ const TABLES = [
   { id: "8", x: 88.5, y: 83 },
 ];
 
-const STORAGE_KEY = "novaletta_table_status_v1";
-// status: "empty" | "booked"
+const STORAGE_KEY = "table_status_v1";
+
 let statusMap = loadStatus();
 let selectedTableId = null;
 
@@ -46,7 +46,7 @@ form.addEventListener("submit", (e) => {
     return;
   }
 
-  // Form verileri (istersen sonra gösterir / kaydederiz)
+  // Form verileri)
   const fd = new FormData(form);
   const payload = Object.fromEntries(fd.entries());
 
