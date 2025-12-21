@@ -1,14 +1,14 @@
 // DEMO masa datası: x/y yüzde (%). Krokinin üstünde doğru yere koyarsın.
 // Not: ID'ler benzersiz olmalı.
 const TABLES = [
-  { id: "1", x: 18, y: 28 },
-  { id: "2", x: 28, y: 28 },
-  { id: "3", x: 38, y: 28 },
-  { id: "4", x: 68, y: 32 },
-  { id: "5", x: 78, y: 32 },
-  { id: "6", x: 88, y: 32 },
-  { id: "7", x: 60, y: 70 },
-  { id: "8", x: 72, y: 74 },
+  { id: "1", x: 11, y: 52 },
+  { id: "2", x: 26, y: 60 },
+  { id: "3", x: 45.5, y: 65 },
+  { id: "4", x: 59, y: 64 },
+  { id: "5", x: 88.5, y: 64 },
+  { id: "6", x: 45.5, y: 86 },
+  { id: "7", x: 59.8, y: 86 },
+  { id: "8", x: 88.5, y: 83 },
 ];
 
 const STORAGE_KEY = "novaletta_table_status_v1";
